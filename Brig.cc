@@ -14,7 +14,7 @@ int Brig::addPirate(Pirate* pirate)
       index = i;
 
   if (index >= 0) {
-    rc = cells.get(index)->getPirates().add(pirate);
+    rc = cells.get(index)->getPirates()->push(pirate);
     if (rc != C_OK)
       return C_NOK;
     cells.get(index)->reduceSpace(pirate->getSpace());

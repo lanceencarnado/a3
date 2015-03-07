@@ -14,7 +14,7 @@ class Cell
   public:
     Cell(int=MAX_CELL_SPACE);
     bool    fits(Pirate*);
-    Queue   getPirates();
+    Queue&  getPirates();
     int     getSpace();
     void    reduceSpace(int);
     void    increaseSpace(int);
