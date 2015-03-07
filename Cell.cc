@@ -8,7 +8,7 @@ Cell::Cell(int size)
   cellNumber = nextId++;
 }
 
-PArray& Cell::getPirates() { return pirates; }
+Queue&  Cell::getPirates()   { return pirates; }
 int     Cell::getSpace()   { return spaceRemaining; }
 
 
