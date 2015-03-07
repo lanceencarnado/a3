@@ -78,21 +78,20 @@ void UImanager::getIdToRemove(int* pId){
 
 void UImanager::printBrig(Brig* brig)
 {
-  CArray& cells = brig->getCells();
+    CArray& cells = brig->getCells();
 
-  cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
-  cout<<"Brig: #cells=" << cells.getSize() <<endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+    cout<<"Brig: #cells=" << cells.getSize() <<endl;
 
-  for (int i=0; i<cells.getSize(); ++i) {
-    cout << "--Cell "<<i<<": space remaining="<<cells.get(i)->getSpace()<<endl;
-    PArray& pa = cells.get(i)->getPirates();
-    for (int j=0; j<pa.getSize(); ++j) {
-      if (pa.get(j) == 0)
-      continue;
-      cout <<"----Pirate id: "<< pa.get(j)->getId() 
-           << "  space: " << pa.get(j)->getSpace() << endl;
+    for (int i=0; i<cells.getSize(); ++i) {
+        cout << "--Cell "<<i<<": space remaining="<<cells.get(i)->getSpace()<<endl;
+        Queue* tempQueue = new Queue(cells.get(i)->getPirates());
+        while (!(tempQueue.empty())) {
+            cout <<"----Pirate id: "<< tempQueue.front()->getId() 
+                << "  space: " << tempQueue.front()->getSpace() << endl;
+            tempQueue.pop();
+        }
     }
-  }
 }
 
 void UImanager::showError(string err)
