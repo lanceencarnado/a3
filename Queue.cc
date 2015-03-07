@@ -59,6 +59,29 @@ void Queue::push(Pirate* newPirate) {
 }
 
 void Queue::pop(){
+    Node *currNode, *nextNode;
+    
+    currNode = head;
+    
+    //queue contains 2 or more elements
+    if(currNode->next != 0){
+        nextNode = currNode->next;
+        
+        delete curNode;
+        nextNode->prev = 0;
+        head = nextNode;
+    }
+    else{
+        if(currNode == 0){
+            //empty queue case
+            return;
+        }
+        else{
+            //only head
+            delete currNode
+        }
+    }
+   
     
 }
 
