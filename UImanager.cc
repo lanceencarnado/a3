@@ -91,6 +91,7 @@ void UImanager::printBrig(Brig* brig)
                 << "  space: " << tempQueue.front()->getSpace() << endl;
             tempQueue.pop();
         }
+        delete tempQueue;
     }
 }
 

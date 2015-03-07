@@ -37,7 +37,6 @@ Queue::~Queue() {
 
     while (currNode != 0) {
         nextNode = currNode->next;
-        delete currNode->data;
         delete currNode;
         currNode = nextNode;
     }
