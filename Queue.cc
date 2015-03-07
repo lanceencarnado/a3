@@ -7,7 +7,7 @@
 //
 
 
-#include Queue.h
+#include "Queue.h"
 
 
 //Default constructor
@@ -17,8 +17,10 @@ Queue::Queue() : head(0){
 }
 
 //Copy constructor
-Queue::Queue(Queue &aQueue){
-    
+Queue::Queue(Queue &origQueue){
+    Node *currNode;
+    head = origQueue.head;
+    while
 }
 
 //Destructor
@@ -100,6 +102,36 @@ bool Queue::find(pirate *aPirate){
     
 }
 
-void Queue::remove(pirate *aPirate){
+void Queue::remove(Pirate* aPirate){
+    Node *currNode, *prevNode;
+
+    prevNode = NULL;
+    currNode = head;
+
+    while (currNode != NULL) {
+        if (currNode->data == aPirate)
+            break;
+        prevNode = currNode;
+        currNode = currNode->next;
+    }
+
+    if (currNode == NULL)
+        return;
+
+    if (prevNode == 0) {        /* first position */
+        head = currNode->next;
+        if (head != 0)          // if there is a head already
+            head->prev = 0;     // set the head's prev to null
+    }
+    else {                      /* middle or end position */
+        prevNode->next = currNode->next;
+        if (currNode->next != 0)
+            currNode->next->prev = prevNode;
+    }
+
+    delete currNode->data;
+    delete currNode;
     
+    // return C_OK;
+
 }
