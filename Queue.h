@@ -22,7 +22,7 @@ class Queue
         Pirate* front();
         bool empty();
         bool find(Pirate*);
-        void remove(Pirate*);
+        void remove(int);
     private:
         Node* head;
 };

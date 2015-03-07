@@ -102,20 +102,20 @@ bool Queue::find(pirate *aPirate){
     
 }
 
-void Queue::remove(Pirate* aPirate){
+void Queue::remove(int pirateId) {
     Node *currNode, *prevNode;
 
-    prevNode = NULL;
+    prevNode = 0;
     currNode = head;
 
-    while (currNode != NULL) {
-        if (currNode->data == aPirate)
+    while (currNode != 0) {
+        if (currNode->data->getId() == pirateId)
             break;
         prevNode = currNode;
         currNode = currNode->next;
     }
 
-    if (currNode == NULL)
+    if (currNode == 0)
         return;
 
     if (prevNode == 0) {        /* first position */
