@@ -1,6 +1,7 @@
 #include "Brig.h"
 
 Brig::Brig() { }
+//testing for github
 
 int Brig::addPirate(Pirate* pirate)
 {
