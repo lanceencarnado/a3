@@ -27,7 +27,35 @@ Queue::~Queue(){
 }
 
 void Queue::push(Pirate* aPirate){
-    
+    Node *newNode;
+    Node *currNode, *prevNode;
+
+    newNode = new Node;
+    newNode->data = newPirate;
+    newNode->prev = 0;
+    newNode->next = 0;
+
+    prevNode = 0;
+    currNode = head;
+
+    while (currNode != 0) {
+        prevNode = currNode;
+        currNode = currNode->next;
+    }
+
+    if (prevNode == 0) {
+        head = newNode;
+    }
+    else {
+        prevNode->next = newNode;
+        newNode->prev  = prevNode; 
+    } 
+
+    newNode->next = currNode;
+
+    if (currNode != 0) {
+        currNode->prev = newNode;
+    }
 }
 
 void Queue::pop(){
