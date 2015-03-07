@@ -85,12 +85,15 @@ void Queue::pop(){
     
 }
 
-Pirate* Queue::front(){
-    
+Pirate* Queue::front() {
+    return head->data;
 }
 
-bool Queue::empty(){
-    
+bool Queue::empty() {
+    if (head == 0)
+        return true;
+    else 
+        return false;   
 }
 
 bool Queue::find(pirate *aPirate){
