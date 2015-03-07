@@ -17,6 +17,7 @@ class Queue
     public:
         Queue();
         Queue(Queue&);
+        ~Queue();
         void push(Pirate*);
         void pop();
         Pirate* front();

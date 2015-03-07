@@ -17,7 +17,7 @@ Queue::Queue() : head(0){
 }
 
 //Copy constructor
-Queue::Queue(Queue &origQueue){
+Queue::Queue(Queue &origQueue) {
 	head = 0;
 	Node *origCurrNode;
 	
@@ -30,8 +30,17 @@ Queue::Queue(Queue &origQueue){
 }
 
 //Destructor
-Queue::~Queue(){
-    
+Queue::~Queue() {
+    Node *currNode, *nextNode;
+
+    currNode = head;
+
+    while (currNode != 0) {
+        nextNode = currNode->next;
+        delete currNode->data;
+        delete currNode;
+        currNode = nextNode;
+    }
 }
 
 void Queue::push(Pirate* newPirate) {
