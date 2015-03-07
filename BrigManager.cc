@@ -39,6 +39,11 @@ void BrigManager::launch()
           view->getNumPirates(&num);
           addPirates(num);
         }
+        else if (choice2 == 2) {
+            int pId;
+            view->getIdToRemove(&pId);
+            removePirate(pId);
+        }
       }
     }
     else if (choice1 == 2) {
@@ -63,5 +68,12 @@ void BrigManager::addPirates(int numPirates)
   }
 
 
+}
+
+void BrigManager::removePirate(int pId){
+    
+    
+}
+    
 }
 

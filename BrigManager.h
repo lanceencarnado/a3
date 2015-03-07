@@ -14,6 +14,7 @@ class BrigManager
     ~BrigManager();
     void launch();
     void addPirates(int);
+    void removePirate(int);
   private:
     UImanager *view;
     Brig      *brig;

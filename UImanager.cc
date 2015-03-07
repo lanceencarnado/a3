@@ -43,10 +43,11 @@ void UImanager::pirateMenu(int* choice)
 #endif
 
   cout<< "\n\n\n                   PIRATE MANAGEMENT MENU \n\n";
+  cout << "( 2 )  Remove Pirate" << endl;
   cout << "( 1 )  Add pirate" << endl;
   cout << "( 0 )  Exit" << endl;
 
-  while (*choice < 0 || *choice > 1) {
+  while (*choice < 0 || *choice > 2) {
     cout << "Enter your selection:  ";
     getline(cin, str);
     stringstream ss(str);
@@ -62,6 +63,17 @@ void UImanager::getNumPirates(int* numPirates)
   getline(cin, str);
   stringstream ss1(str);
   ss1 >> *numPirates;
+}
+
+void UImanager::getIdToRemove(int* pId){
+    
+    string    str;
+    
+    cout << endl << "Enter the Id of the pirate to remove:   ";
+    getline(cin, str);
+    stringstream ss1(str);
+    ss1 >> *pId;
+    
 }
 
 void UImanager::printBrig(Brig* brig)
