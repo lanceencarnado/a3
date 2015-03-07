@@ -18,9 +18,15 @@ Queue::Queue() : head(0){
 
 //Copy constructor
 Queue::Queue(Queue &origQueue){
-    Node *currNode;
-    head = origQueue.head;
-    while
+	head = 0;
+	Node *origCurrNode;
+	
+	origCurrNode = origQueue.head;
+	
+	while (origCurrNode != 0) {
+		push(origCurrNode->data);
+		origCurrNode = origCurrNode->next;
+	}
 }
 
 //Destructor
