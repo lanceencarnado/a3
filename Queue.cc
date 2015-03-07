@@ -26,7 +26,7 @@ Queue::~Queue(){
     
 }
 
-void Queue::push(Pirate* aPirate){
+void Queue::push(Pirate* newPirate) {
     Node *newNode;
     Node *currNode, *prevNode;
 
