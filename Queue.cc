@@ -11,7 +11,8 @@
 
 
 //Default constructor
-Queue::Queue(){
+Queue::Queue() : head(0){
+    
     
 }
 
