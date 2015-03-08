@@ -150,29 +150,25 @@ void Queue::remove(int pirateId) {
 
 }*/
 
-void Queue::remove(pirate *aPirate){
+void Queue::remove(int pirateId) {
     
 }
 
-node* Queue::find(int pId){
-    Node *currNode, *prevNode;
+bool Queue::contains(int pirateId) {
+    Node *currNode;
+    // Node *prevNode;
     
-    prevNode = 0;
+    // prevNode = 0;
     currNode = head;
     
     while (currNode != 0) {
         if (currNode->data->getId() == pirateId)
-            break;
-        prevNode = currNode;
+            return true;
+        // prevNode = currNode;
         currNode = currNode->next;
     }
     
-    if (currNode == 0)
-        return;
-    
-    return currNode;
-    
-    // return C_OK;
+    return false;   // we broke out of the while loop because currNode == 0, so it's not there
 }
 
 

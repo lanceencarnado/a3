@@ -15,7 +15,7 @@ class Brig
   public:
     Brig();
     int addPirate(Pirate*);
-    void removePirate(Pirate*);
+    int removePirate(Pirate*);
     CArray& getCells();
   private:
     CArray cells;
