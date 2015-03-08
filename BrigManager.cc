@@ -72,8 +72,9 @@ void BrigManager::addPirates(int numPirates)
 
 void BrigManager::removePirate(int pId){
     
+    brig->removePirate(pId);
     
 }
     
-}
+
 
