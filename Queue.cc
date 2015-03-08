@@ -115,7 +115,7 @@ bool Queue::empty() {
 bool Queue::find(pirate *aPirate){
     
 }
-
+*/
 void Queue::remove(int pirateId) {
     Node *currNode, *prevNode;
 
@@ -148,11 +148,8 @@ void Queue::remove(int pirateId) {
     
     // return C_OK;
 
-}*/
-
-void Queue::remove(int pirateId) {
-    
 }
+
 
 
 bool Queue::contains(int pirateId) {
