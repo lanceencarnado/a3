@@ -30,5 +30,9 @@ int Brig::addPirate(Pirate* pirate)
   return C_OK;
 }
 
+void Brig::removePirate(Pirate*){
+    
+}
+
 CArray& Brig::getCells() { return cells; }
 
