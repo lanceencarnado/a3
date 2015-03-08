@@ -111,7 +111,7 @@ bool Queue::empty() {
     else 
         return false;   
 }
-
+/*
 bool Queue::find(pirate *aPirate){
     
 }
@@ -132,12 +132,12 @@ void Queue::remove(int pirateId) {
     if (currNode == 0)
         return;
 
-    if (prevNode == 0) {        /* first position */
+    if (prevNode == 0) {        // first position
         head = currNode->next;
         if (head != 0)          // if there is a head already
             head->prev = 0;     // set the head's prev to null
     }
-    else {                      /* middle or end position */
+    else {                      // middle or end position
         prevNode->next = currNode->next;
         if (currNode->next != 0)
             currNode->next->prev = prevNode;
@@ -148,4 +148,31 @@ void Queue::remove(int pirateId) {
     
     // return C_OK;
 
+}*/
+
+void Queue::remove(pirate *aPirate){
+    
 }
+
+node* Queue::find(int pId){
+    Node *currNode, *prevNode;
+    
+    prevNode = 0;
+    currNode = head;
+    
+    while (currNode != 0) {
+        if (currNode->data->getId() == pirateId)
+            break;
+        prevNode = currNode;
+        currNode = currNode->next;
+    }
+    
+    if (currNode == 0)
+        return;
+    
+    return currNode;
+    
+    // return C_OK;
+}
+
+
