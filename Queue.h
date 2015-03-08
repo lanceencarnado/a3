@@ -18,7 +18,7 @@ class Queue
         Queue();
         Queue(Queue&);
         ~Queue();
-        void push(Pirate*);
+        int push(Pirate*);
         void pop();
         Pirate* front();
         bool empty();

@@ -42,7 +42,7 @@ Queue::~Queue() {
     }
 }
 
-void Queue::push(Pirate* newPirate) {
+int Queue::push(Pirate* newPirate) {
     Node *newNode;
     Node *currNode, *prevNode;
 
@@ -72,6 +72,7 @@ void Queue::push(Pirate* newPirate) {
     if (currNode != 0) {
         currNode->prev = newNode;
     }
+    return C_OK
 }
 
 void Queue::pop(){
